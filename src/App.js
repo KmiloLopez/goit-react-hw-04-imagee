@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import Searchbar from './components/Searchbar';
 import ImageGalleryItem from './components/ImageGalleryItem';
 import ImageGallery from './components/ImageGallery';
@@ -20,6 +20,9 @@ function App() {
     const [Page, setPage] = useState(1);
     
      */
+useEffect(()=>{
+  setPicturesFound("");
+},[SearchThis])
     const handleImageClick = (largeImage) => {
       setSelectedImage(largeImage);
       setToggleModal(true);
